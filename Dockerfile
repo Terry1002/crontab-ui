@@ -1,6 +1,8 @@
 # docker run -d -p 8000:8000 alseambusher/crontab-ui
 FROM alpine:3.13.5
 
+RUN sed -i 's!https://dl-cdn.alpinelinux.org/!https://mirrors.ustc.edu.cn/!g' /etc/apk/repositories
+
 ENV PYTHONUNBUFFERED=1
 
 RUN echo "**** install Python ****" && \
