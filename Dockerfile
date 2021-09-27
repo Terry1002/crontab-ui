@@ -33,7 +33,6 @@ RUN   apk --no-cache add \
       cmake \
       g++ \
       gfortran \
-      py-pip \
       npm \
       supervisor \
       tzdata
