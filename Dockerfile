@@ -36,6 +36,8 @@ RUN   apk --no-cache add \
       npm \
       supervisor \
       vim \
+      py-pip \ 
+      python-dev \
       tzdata
 
 COPY supervisord.conf /etc/supervisord.conf
