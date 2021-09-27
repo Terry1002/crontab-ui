@@ -35,7 +35,7 @@ RUN   apk --no-cache add \
       gfortran \
       npm \
       supervisor \
-      vi \
+      vim \
       tzdata
 
 COPY supervisord.conf /etc/supervisord.conf
