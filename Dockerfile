@@ -29,6 +29,11 @@ RUN   apk --no-cache add \
       wget \
       curl \
       nodejs \
+      make \
+      cmake \
+      g++ \
+      gfortran \
+      py-pip \
       npm \
       supervisor \
       tzdata
