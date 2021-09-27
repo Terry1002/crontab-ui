@@ -21,7 +21,6 @@ RUN   mkdir /crontab-ui; touch $CRON_PATH/root; chmod +x $CRON_PATH/root
 
 WORKDIR /crontab-ui
 
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r /crontab-ui/requirements.txt    
 
 LABEL maintainer "@alseambusher"
 LABEL description "Crontab-UI docker"
@@ -36,6 +35,9 @@ RUN   apk --no-cache add \
 
 COPY supervisord.conf /etc/supervisord.conf
 COPY . /crontab-ui
+
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r /crontab-ui/requirements.txt    
+
 
 RUN   npm install
 
