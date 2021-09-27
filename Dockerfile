@@ -12,7 +12,7 @@ RUN echo "**** install Python ****" && \
     echo "**** install pip ****" && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
-    pip3 install --no-cache --upgrade pip setuptools wheel && \
+    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache --upgrade pip setuptools wheel && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 
 ENV   CRON_PATH /etc/crontabs
