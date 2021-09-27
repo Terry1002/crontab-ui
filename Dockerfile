@@ -32,6 +32,8 @@ RUN   apk --no-cache add \
       libffi-dev \
       openssl-dev \
       libc-dev \
+      jpeg-dev \
+      zlib-dev \
       gcc \
       py-pip \ 
       tzdata
