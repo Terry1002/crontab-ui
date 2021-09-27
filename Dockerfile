@@ -27,9 +27,18 @@ RUN   apk --no-cache add \
       npm \
       supervisor \
       vim \
+      python3 \
+      python3-dev \
+      libffi-dev \
+      openssl-dev \
+      libc-dev \
+      gcc \
       py-pip \ 
-      python-dev \
       tzdata
+
+RUN pip install --upgrade pip setuptools==45.2.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+RUN pip install cython -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 COPY supervisord.conf /etc/supervisord.conf
 COPY . /crontab-ui
