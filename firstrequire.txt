@@ -1,0 +1,5 @@
+cppy
+certifi
+cython
+wheel
+numpy==1.19.1
