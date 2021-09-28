@@ -42,13 +42,15 @@ RUN   apk --no-cache add \
 
 RUN pip install --upgrade pip setuptools==45.2.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-RUN pip install cython -i https://pypi.tuna.tsinghua.edu.cn/simple
-
 COPY supervisord.conf /etc/supervisord.conf
 COPY . /crontab-ui
 
 RUN mkdir ~/.pip
-COPY pip.conf ~/.pip
+#COPY pip.conf ~/.pip
+
+RUN pip config set global.inxdex-url  https://pypi.tuna.tsinghua.edu.cn/simple
+
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r /crontab-ui/firstrequire.txt
 
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --no-cache-dir -r /crontab-ui/requirements.txt
 
