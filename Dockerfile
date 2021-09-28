@@ -35,6 +35,8 @@ RUN   apk --no-cache add \
       jpeg-dev \
       zlib-dev \
       gcc \
+      libxml2-dev \
+      libxslt-dev \
       py-pip \ 
       tzdata
 
